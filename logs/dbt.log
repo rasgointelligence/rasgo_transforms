@@ -1,0 +1,27 @@
+
+
+============================== 2022-06-28 12:30:31.279428 | 997bcbb3-0e08-440c-aeb9-00f218b78c8d ==============================
+12:30:31.279440 [info ] [MainThread]: Running with dbt=1.1.0
+12:30:31.279894 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/griff/.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'project_name': 'rasgo_transforms', 'skip_profile_setup': False, 'which': 'init', 'indirect_selection': 'eager'}
+12:30:31.280092 [debug] [MainThread]: Tracking: tracking
+12:30:31.324911 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1044d4340>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1044d4070>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1044d40a0>]}
+12:30:31.326761 [info ] [MainThread]: Creating dbt configuration folder at /Users/griff/.dbt
+12:30:31.328400 [debug] [MainThread]: Starter project path: /usr/local/Cellar/dbt-snowflake/1.1.0/libexec/lib/python3.9/site-packages/dbt/include/starter_project
+12:35:57.233263 [info ] [MainThread]: Profile rasgo_transforms written to /Users/griff/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+12:35:57.234203 [info ] [MainThread]: 
+Your new dbt project "rasgo_transforms" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+12:35:57.234658 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1044d4cd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104eeec10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10452f730>]}
