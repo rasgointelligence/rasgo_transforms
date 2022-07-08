@@ -1,11 +1,11 @@
-{% macro dateadd(source_table, date_part, date, offset, alias, overwrite_columns)%}
+{% macro dateadd(date_part, date, offset, alias, overwrite_columns, source_table='cte_source_table') %}
 
     {{ return(adapter.dispatch('dateadd', 'rasgo_transforms')(source_table, date_part, date, offset, alias, overwrite_columns)) }}
 
 {% endmacro %}
 
 
-{% macro default__dateadd(source_table, date_part, date, offset, alias, overwrite_columns)%}
+{% macro default__dateadd(source_table, date_part, date, offset, alias, overwrite_columns) %}
 
     {%- if overwrite_columns -%}
     {%- set alias = date -%}
@@ -23,7 +23,7 @@
 {% endmacro %}
 
 
-{% macro bigquery__dateadd(source_table, date_part, date, offset, alias, overwrite_columns)%}
+{% macro bigquery__dateadd(source_table, date_part, date, offset, alias, overwrite_columns) %}
 
     {%- if overwrite_columns -%}
     {%- set alias = date -%}
@@ -41,7 +41,7 @@
 {% endmacro %}
 
 
-{% macro postgres__dateadd(source_table, date_part, date, offset, alias, overwrite_columns)%}
+{% macro postgres__dateadd(source_table, date_part, date, offset, alias, overwrite_columns) %}
 
     {%- if overwrite_columns -%}
     {%- set alias = date -%}
@@ -59,7 +59,7 @@
 {% endmacro %}
 
 
-{% macro redshift__dateadd(source_table, date_part, date, offset, alias, overwrite_columns)%}
+{% macro redshift__dateadd(source_table, date_part, date, offset, alias, overwrite_columns) %}
 
     {%- if overwrite_columns -%}
     {%- set alias = date -%}
@@ -77,7 +77,7 @@
 {% endmacro %}
 
 
-{% macro snowflake__dateadd(source_table, date_part, date, offset, alias, overwrite_columns)%}
+{% macro snowflake__dateadd(source_table, date_part, date, offset, alias, overwrite_columns) %}
 
     {%- if overwrite_columns -%}
     {%- set alias = date -%}

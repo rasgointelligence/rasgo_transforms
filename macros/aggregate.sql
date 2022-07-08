@@ -1,11 +1,11 @@
-{% macro aggregate(source_table, group_by, aggregations)}
+{% macro aggregate(group_by, aggregations, source_table='cte_source_table') %}
 
     {{ return(adapter.dispatch('aggregate', 'rasgo_transforms')(source_table, group_by, aggregations)) }}
 
 {% endmacro %}
 
 
-{% macro default__aggregate(source_table, group_by, aggregations)}
+{% macro default__aggregate(source_table, group_by, aggregations) %}
 
     SELECT
     {%- for group_item in group_by %}
@@ -24,7 +24,7 @@
 {% endmacro %}
 
 
-{% macro snowflake__aggregate(source_table, group_by, aggregations)}
+{% macro snowflake__aggregate(source_table, group_by, aggregations) %}
 
     {%- set final_col_list = [] -%}
     {%- set entropy_aggs = {} -%}

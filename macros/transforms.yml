@@ -37,7 +37,6 @@ macros:
         description: A dict where the keys are columns and the values are the new type to cast them to.
       - name: overwrite_columns
         type: boolean
-        is_optional: true
         description: to overwrite column names with the new casted column, use 'true'. otherwise, use 'false'. defaults to 'false'.
 
   - name: dateadd
@@ -65,11 +64,9 @@ macros:
       - name: alias
         type: string
         description: Name of output column
-        is_optional: true
       - name: overwrite_columns
         type: boolean
         description: "Optional: if true, the output column will replace the existing 'date' column"
-        is_optional: true
 
   - name: drop_columns
     tags:
@@ -87,8 +84,6 @@ macros:
       - name: include_cols
         type: column_list
         description: A list of the columns from the dataset you want to keep.
-        is_optional: true
       - name: exclude_cols
         type: column_list
         description: A list of the columns from the dataset you want to drop. Any columns not in the exclude_cols list will be kept.
-        is_optional: true

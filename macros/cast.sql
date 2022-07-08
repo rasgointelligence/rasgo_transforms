@@ -1,4 +1,4 @@
-{% macro cast(source_table, casts, overwrite_columns) %}
+{% macro cast(casts, overwrite_columns, source_table='cte_source_table') %}
  
     {{ return(adapter.dispatch('cast', 'rasgo_transforms')(source_table, casts, overwrite_columns)) }}
 
